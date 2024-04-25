@@ -4,6 +4,6 @@ ARG KUSTOMIZE="https://github.com/kubernetes-sigs/kustomize/releases/download/ku
 
 WORKDIR /work
 
-RUN apk --no-cache add curl
+RUN apk --no-cache add curl git
 RUN curl -L --remote-name-all -okustomize.tgz ${KUSTOMIZE} && tar -xvzf kustomize.tgz && mv kustomize /usr/local/bin
 
